@@ -11,7 +11,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        // define colors
+        main: {
+          black: '#111827', // demo. Usage: text-main-black, bg-main-black
+        },
       },
     },
   },

@@ -5,14 +5,10 @@ import { useStorage } from '@vueuse/core'
 const cookieName = useCookie('key')
 // Update cookie value
 cookieName.value = 'HAHA'
-// Delete cookie
-// cookieName.value = null
+
 // demo usage of localstorage. Already in README
 const storageName = useStorage('key', '')
-// Update localstorage value
 storageName.value = 'HIHI'
-// Delete localstorage
-// storageName.value = null
 </script>
 
 <template>
@@ -25,6 +21,9 @@ storageName.value = 'HIHI'
       localstorage value: {{ storageName }}
     </div>
 
-    <NuxtIcon name="close" class="text-red-600" />
+    <div class="flex items-center gap-3">
+      icon usage:
+      <NuxtIcon name="close" class="text-red-600" />
+    </div>
   </div>
 </template>

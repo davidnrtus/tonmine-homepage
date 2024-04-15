@@ -13,11 +13,19 @@ cookieName.value = null
 
 ## LocalStorage
 ```bash
+import { useStorage } from '@vueuse/core'
+
 const lsName = useLocalStorage("key", "")
 // Update LocalStorage value
 lsName.value = "updated value"
 // Delete LocalStorage
 lsName.value = null
+```
+
+## Read data from .env
+```bash
+const config = useRuntimeConfig();
+const data = config.public.api
 ```
 
 ## Setup
