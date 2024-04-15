@@ -15,7 +15,7 @@ const menu = ref<Select[]>([
   <header class="h-16 flex items-center border-b border-gray-400">
     <div class="container flex items-center text-gray-200">
       <NuxtLink to="/">
-        <h2>Logo</h2>
+        <NuxtIcon name="home" />
       </NuxtLink>
       <ul class="flex-1 flex items-center justify-end gap-6">
         <li

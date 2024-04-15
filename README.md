@@ -2,6 +2,13 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Icon Usage
+```bash
+<NuxtIcon name="close" class="text-red-600" />
+
+NOTE: name is match with file name on /assets/icons folder
+```
+
 ## Cookies
 ```bash
 const cookieName = useCookie("key")
