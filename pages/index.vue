@@ -24,5 +24,7 @@ storageName.value = "HIHI"
     <div>
       localstorage value: {{ storageName }}
     </div>
+
+    <NuxtIcon name="close" class="text-red-600" />
   </div>
 </template>

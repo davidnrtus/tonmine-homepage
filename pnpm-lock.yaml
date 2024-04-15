@@ -17,6 +17,9 @@ dependencies:
   nuxt:
     specifier: ^3.11.2
     version: 3.11.2(@unocss/reset@0.59.2)(floating-vue@5.2.2)(unocss@0.59.2)(vite@5.2.8)
+  nuxt-icons:
+    specifier: ^3.2.1
+    version: 3.2.1
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(vue@3.4.21)
@@ -4910,6 +4913,15 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
+
+  /nuxt-icons@3.2.1:
+    resolution: {integrity: sha512-trvAFq9oWYwWEQ0qZDHVxvLK+TwOdFnoXYOXQvN1CRUlp1DBJdxC8vXO3mED2Kb+Suag+bpWLC6eXGrRwhfffQ==}
+    dependencies:
+      '@nuxt/kit': 3.11.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: false
 
   /nuxt@3.11.2(@unocss/reset@0.59.2)(floating-vue@5.2.2)(unocss@0.59.2)(vite@5.2.8):
