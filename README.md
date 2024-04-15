@@ -2,6 +2,24 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Cookies
+```bash
+const cookieName = useCookie("key")
+// Update cookie value
+cookieName.value = "updated value"
+// Delete cookie
+cookieName.value = null
+```
+
+## LocalStorage
+```bash
+const lsName = useLocalStorage("key", "")
+// Update LocalStorage value
+lsName.value = "updated value"
+// Delete LocalStorage
+lsName.value = null
+```
+
 ## Setup
 
 Make sure to install the dependencies:
