@@ -6,10 +6,14 @@
       </NuxtLink>
       <ul class="flex-1 flex items-center justify-end gap-6">
         <li>
-          <NuxtLink to="/">Page 1</NuxtLink>
+          <NuxtLink to="/">
+            Page 1
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/">Page 2</NuxtLink>
+          <NuxtLink to="/">
+            Page 2
+          </NuxtLink>
         </li>
       </ul>
     </div>

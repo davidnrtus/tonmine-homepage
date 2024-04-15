@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useStorage } from '@vueuse/core';
+import { useStorage } from '@vueuse/core'
 
 // demo usage of cookie. Already in README
-const cookieName = useCookie("key")
+const cookieName = useCookie('key')
 // Update cookie value
-cookieName.value = "HAHA"
+cookieName.value = 'HAHA'
 // Delete cookie
 // cookieName.value = null
 // demo usage of localstorage. Already in README
-let storageName = useStorage("key", "")
+const storageName = useStorage('key', '')
 // Update localstorage value
-storageName.value = "HIHI"
+storageName.value = 'HIHI'
 // Delete localstorage
 // storageName.value = null
 </script>

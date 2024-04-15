@@ -5,6 +5,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -20,6 +22,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4"
+    "@antfu/eslint-config": "^2.13.3",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "eslint": "^9.0.0"
   }
 }
