@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    font-family: "Poppins", sans-serif;
-    @apply font-normal text-sm text-white bg-main-black;
+    font-family: "Inter", sans-serif;
+    @apply font-normal text-sm text-white bg-system-black;
   }
   svg {
     @apply text-xl !mb-0;
