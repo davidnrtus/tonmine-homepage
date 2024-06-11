@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
-import { useStorage } from '@vueuse/core'
 import { StorageKey } from '~/constants'
 import type { ApiResponse, UserProfile } from '~/types'
+import { useStatefulCookie } from '~/composables/useStatefulCookie'
+import { useAuthAsyncData } from '~/composables/useAuthAsyncData'
 
 interface State {
   user?: UserProfile
@@ -17,17 +18,11 @@ export const useAuthStore = defineStore('auth', {
     },
   },
   actions: {
-    // DEMO of calling API. Please edit it
     async getUserProfile() {
       try {
-        const config = useRuntimeConfig()
-        const baseUrl = `${config.public.baseUrl}/user-profile`
-        const { data, pending, execute } = await useAsyncData<
-          ApiResponse<UserProfile>
-        >(() =>
-          $fetch(baseUrl, {
-            method: 'GET',
-          }),
+        const { pending, data, execute } = await useAuthAsyncData<ApiResponse<UserProfile>>(
+          '/user/profile',
+          'GET',
         )
         if (pending.value)
           await execute()
@@ -41,14 +36,9 @@ export const useAuthStore = defineStore('auth', {
       }
     },
     handleLogout() {
-      const accessToken = useStorage(StorageKey.DEMO_KEY_JWT, '')
-      const accessTokenCookie = useCookie(StorageKey.DEMO_KEY_JWT)
+      const accessTokenCookie = useStatefulCookie(StorageKey.ACCESS_TOKEN)
       this.user = undefined
-      accessToken.value = null
       accessTokenCookie.value = null
-    },
-    updateUserProfile(data: UserProfile) {
-      this.user = data
     },
   },
 })

@@ -11,6 +11,6 @@ export const META_DATA: Record<string, MetaData> = {
 }
 
 export enum StorageKey {
-  DEMO_KEY_JWT = 'DEMO_KEY_JWT',
+  ACCESS_TOKEN = 'DEMO_KEY_JWT',
   DEMO_KEY_ADDRESS = 'DEMO_KEY_ADDRESS',
 }
