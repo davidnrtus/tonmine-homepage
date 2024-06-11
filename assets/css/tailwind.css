@@ -8,7 +8,7 @@
     @apply font-normal text-sm text-white bg-system-black;
   }
   svg {
-    @apply text-xl !mb-0;
+    @apply !mb-0;
   }
 }
 @layer components {}
