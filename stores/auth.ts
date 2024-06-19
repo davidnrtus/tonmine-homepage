@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
 import { StorageKey } from '~/constants'
 import type { ApiResponse, UserProfile } from '~/types'
-import { useStatefulCookie } from '~/composables/useStatefulCookie'
-import { useAuthAsyncData } from '~/composables/useAuthAsyncData'
 
 interface State {
   user?: UserProfile
@@ -36,7 +34,7 @@ export const useAuthStore = defineStore('auth', {
       }
     },
     handleLogout() {
-      const accessTokenCookie = useStatefulCookie(StorageKey.ACCESS_TOKEN)
+      const accessTokenCookie = useStatefulStorage(StorageKey.ACCESS_TOKEN)
       this.user = undefined
       accessTokenCookie.value = null
     },

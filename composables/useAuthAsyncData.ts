@@ -1,6 +1,4 @@
-import { useStatefulCookie } from './useStatefulCookie'
 import { StorageKey } from '~/constants'
-import type { ApiResponse } from '~/types'
 
 type PayloadKey = 'params' | 'body'
 
@@ -12,8 +10,8 @@ export async function useAuthAsyncData<T>(
 ) {
   const config = useRuntimeConfig()
   const baseUrl = `${config.public.baseUrl}${path}`
-  const accessToken = useStatefulCookie(StorageKey.ACCESS_TOKEN)
-  return await useAsyncData<T>(() =>
+  const accessToken = useStatefulStorage(StorageKey.ACCESS_TOKEN)
+  return await useAsyncData<T>(path, () =>
     $fetch(baseUrl, {
       method,
       body: payload?.body,
@@ -24,6 +22,5 @@ export async function useAuthAsyncData<T>(
         'Accept': 'application/json',
       },
       ...options,
-    }),
-  )
+    }))
 }
