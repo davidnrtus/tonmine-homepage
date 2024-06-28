@@ -19,3 +19,8 @@ export interface Select {
   value: string
   icon?: string
 }
+
+export interface PrecisionConfig {
+  maxVal: number
+  precision: number
+}
