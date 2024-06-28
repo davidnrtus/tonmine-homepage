@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icons',
     'shadcn-nuxt',
+    "@nuxtjs/google-fonts"
   ],
   googleFonts: {
     families: {
