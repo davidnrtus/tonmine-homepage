@@ -18,7 +18,7 @@ module.exports = {
         lg: '2rem',
       },
       screens: {
-        '2xl': '1400px',
+        xl: '1280px',
       },
     },
     extend: {
@@ -36,6 +36,8 @@ module.exports = {
           300: '#B1B1B1',
           200: '#CACACA',
         },
+        F8F8F8: '#F8F8F8',
+        121212: '#121212',
       },
       keyframes: {
         'accordion-down': {

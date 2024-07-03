@@ -14,11 +14,12 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icons',
     'shadcn-nuxt',
-    "@nuxtjs/google-fonts"
+    '@nuxtjs/google-fonts',
   ],
   googleFonts: {
     families: {
-      Inter: [300, 400, 500, 600, 700, 800, 900],
+      'Krona One': [300, 400, 500, 600, 700, 800, 900],
+      'Monda': [300, 400, 500, 600, 700, 800, 900],
     },
   },
 })

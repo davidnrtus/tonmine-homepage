@@ -4,12 +4,21 @@
 
 @layer base {
   body {
-    font-family: "Inter", sans-serif;
-    @apply font-normal text-sm text-white bg-system-black;
+    font-family: "Monda", sans-serif;
+    background-image: url(~/assets/images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @apply font-normal text-base text-white bg-black;
   }
   svg {
     @apply !mb-0;
   }
 }
-@layer components {}
+@layer components {
+  .text-heading {
+    font-family: "Krona One", sans-serif;
+  }
+}
 @layer utilities {}
